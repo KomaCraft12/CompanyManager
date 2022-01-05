@@ -4,11 +4,11 @@ Company manager has been programmed with the help of laravel!
 
 ## LANGUAGES USED
 
--**PHP
--**Laravel
--**MySQL
--**CSS
--**HTML
+-PHP
+-Laravel
+-MySQL
+-CSS
+-HTML
 
 ## DEMO
 
