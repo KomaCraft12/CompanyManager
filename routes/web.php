@@ -13,6 +13,9 @@ use App\Http\Controllers\EmployeesList;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function(){
+    return redirect('/home');
+});
 
 Route::get('home', [Home::class,'index']);
 
