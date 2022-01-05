@@ -1,4 +1,7 @@
 <style>
+body {
+    background-color: 	#DCDCDC;
+}
 input[type=text], input[type=number], select {
   width: 50%;
   padding: 12px 20px;
@@ -30,11 +33,18 @@ div#cim {
     font-size: 24pt;
     color: black;
     text-align: center;
+    margin-bottom: 15px;
 }
 </style>
 
 <!-- Cim kiirása -->
-<div id="cim">Alkalmazott felvétele</div>
+<div id="cim">
+<img src="https://cdn-icons.flaticon.com/png/512/1664/premium/1664869.png?token=exp=1641414606~hmac=99fd8e18d128bfcc79f227d38d02e8c2"
+width="256px"
+>
+<br>
+Alkalmazott felvétele
+</div>
 
 <!-- Form - alkalmazott adatainak felvétele -->
 <div id="form">
@@ -51,10 +61,11 @@ div#cim {
         <span style="color: red;">@error('name'){{$message}}@enderror</span><br>
         <input type="text" name="name"><br>
         <label>Fizetés</label><br>
-        <span style="color: red;">@error('salery'){{$message}}@enderror</span><br>
+        <span style="color: red;">@error('salary'){{$message}}@enderror</span><br>
         <input type="number" name="salary"><br>
         <input type="submit" name="submit" value="Felvétel!">
     </form>
+    <a href="employees">Alkalmazottak</a>
 </div>
 
 <!-- Értesités a sikeres adat hozzáadásról -->
