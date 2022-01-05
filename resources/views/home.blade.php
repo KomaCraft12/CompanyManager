@@ -39,9 +39,7 @@ div#cim {
 
 <!-- Cim kiirása -->
 <div id="cim">
-<img src="https://cdn-icons.flaticon.com/png/512/1664/premium/1664869.png?token=exp=1641414606~hmac=99fd8e18d128bfcc79f227d38d02e8c2"
-width="256px"
->
+<img src="https://web.komaweb.eu/employees.png" width="256px">
 <br>
 Alkalmazott felvétele
 </div>
