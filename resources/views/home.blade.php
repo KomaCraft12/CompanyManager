@@ -33,8 +33,10 @@ div#cim {
 }
 </style>
 
+<!-- Cim kiirása -->
 <div id="cim">Alkalmazott felvétele</div>
 
+<!-- Form - alkalmazott adatainak felvétele -->
 <div id="form">
     <form action="homes" method="post">
         @csrf
@@ -55,7 +57,7 @@ div#cim {
     </form>
 </div>
 
-
+<!-- Értesités a sikeres adat hozzáadásról -->
 @if(isset($_GET['alert']))
     <script>alert('<?php print $_GET['alert']; ?>')</script>
 @endif

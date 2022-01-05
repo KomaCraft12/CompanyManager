@@ -7,11 +7,9 @@ use Illuminate\Support\Facades\DB;
 
 class CreateCompany extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+
+    // Két cég hozzáadása
+    
     public function run()
     {
         DB::table('companies')->insert([

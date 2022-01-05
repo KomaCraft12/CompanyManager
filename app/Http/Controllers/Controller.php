@@ -14,14 +14,16 @@ class Controller extends BaseController
 
     function getData(Request $req){
 
+        // Form mezők ellenőrzése
         $req->validate([
             'name'=>'required | min:5',
             'salary'=>'required | numeric|min:1'
         ]);
 
-        //return $req->input();
+        // Form adatok átvétele
         $data = $req->input();
 
+        // Adatok hozzáadása az adatbázishoz
         DB::table('employees')->insert([
             'company_id' => $data['company_id'],
             'name' => $data['name'],
