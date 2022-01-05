@@ -1,5 +1,5 @@
 <style>
-input[type=text], select {
+input[type=text], input[type=number], select {
   width: 50%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -20,32 +20,72 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
 div#form {
     width: 100%;
     padding-left: 25%;
     padding-right: 25%;
 
 }
+div#cim {
+    font-size: 24pt;
+    color: black;
+    text-align: center;
+}
 </style>
 
+<div id="cim">Alkalmazott felvétele</div>
 
 <div id="form">
-<form method="post">
-<label>Cég</label><br>
-<select>
-@foreach($companies as $company)
-<option value="{{ $company['company_id'] }}">{{ $company['company_name'] }}</option>
-@endforeach
-</select>
-<br>
-<label>Név</label><br>
-<input type="text" name="name"><br>
-<label>Fizetés</label><br>
-<input type="text" name="salery"><br>
-<input type="submit" name="submit" value="submit">
-</form>
+    <form action="homes" method="post">
+        @csrf
+        <label>Cég</label><br>
+        <select name="company_id">
+        @foreach($companies as $company)
+        <option value="{{ $company['company_id'] }}">{{ $company['company_name'] }}</option>
+        @endforeach
+        </select>
+        <br>
+        <label>Név</label><br>
+        <span style="color: red;">@error('name'){{$message}}@enderror</span><br>
+        <input type="text" name="name"><br>
+        <label>Fizetés</label><br>
+        <span style="color: red;">@error('salery'){{$message}}@enderror</span><br>
+        <input type="number" name="salary"><br>
+        <input type="submit" name="submit" value="Felvétel!">
+    </form>
 </div>
+
+
+@if(isset($_GET['alert']))
+    <script>alert('<?php print $_GET['alert']; ?>')</script>
+@endif
+
+<script>
+
+/*   
+function fetch(){
+postData('http://localhost/CompanyManager/public/home', { answer: 42 })
+  .then(data => {
+    console.log(data); // JSON data parsed by `data.json()` call
+});
+}
+
+async function postData(url = '', data = {}) {
+  
+  const response = await fetch(url, {
+    method: 'GET',
+    mode: 'cors',
+    cache: 'no-cache',
+    credentials: 'same-origin', 
+    headers: {
+      'Content-Type': 'application/json'
+
+    },
+    redirect: 'follow',
+    referrerPolicy: 'no-referrer', 
+    body: JSON.stringify(data) 
+  });
+  return response.json(); 
+}
+*/
+</script>

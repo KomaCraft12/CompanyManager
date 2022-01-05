@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home;
 use App\Http\Controllers\EmployeesList;
+use App\Http\Controllers\Controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,4 +21,6 @@ Route::get('/', function(){
 Route::get('home', [Home::class,'index']);
 
 Route::get('employees', [EmployeesList::class,'index']);
+
+Route::post("homes",[Controller::class,'getData']);
 
