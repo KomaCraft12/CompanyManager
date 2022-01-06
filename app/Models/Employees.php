@@ -9,7 +9,7 @@ class Employees extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['company_id', 'name', 'salery'];
+    protected $fillable = ['company_id', 'name', 'salary'];
 
     public $timestamps = false;
 }

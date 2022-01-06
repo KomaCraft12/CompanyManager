@@ -3,19 +3,19 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use App\Models\Companies;
 
-class CreateCompany extends Seeder
+class CompaniesSeeder extends Seeder
 {
 
     // Két cég hozzáadása
     
     public function run()
     {
-        DB::table('companies')->insert([
+        Companies::create([
             'company_name' => 'Nyerő Kft.',
         ]);
-        DB::table('companies')->insert([
+        Companies::create([
             'company_name' => 'Kis Bt.',
         ]);
 

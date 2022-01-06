@@ -68,35 +68,5 @@ Alkalmazott felvétele
 
 <!-- Értesités a sikeres adat hozzáadásról -->
 @if(isset($_GET['alert']))
-    <script>alert('<?php print $_GET['alert']; ?>')</script>
+    <script>alert('<?php print $_GET['alert']; ?>'); window.location.href="home";</script>
 @endif
-
-<script>
-
-/*   
-function fetch(){
-postData('http://localhost/CompanyManager/public/home', { answer: 42 })
-  .then(data => {
-    console.log(data); // JSON data parsed by `data.json()` call
-});
-}
-
-async function postData(url = '', data = {}) {
-  
-  const response = await fetch(url, {
-    method: 'GET',
-    mode: 'cors',
-    cache: 'no-cache',
-    credentials: 'same-origin', 
-    headers: {
-      'Content-Type': 'application/json'
-
-    },
-    redirect: 'follow',
-    referrerPolicy: 'no-referrer', 
-    body: JSON.stringify(data) 
-  });
-  return response.json(); 
-}
-*/
-</script>
