@@ -33,6 +33,7 @@ class Controller extends BaseController
         $notify = "Sikeres adatfelvétel!";
         return redirect('/home?alert='.urlencode($notify));
         
+        
     }
     
 

@@ -5,7 +5,7 @@ body {
 #employees {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 50%;
+  width: 100%;
 }
 
 #employees td, #employees th {
@@ -27,9 +27,10 @@ body {
   color: white;
 }
 div#table {
-    width: 100%;
-    padding-left: 25%;
-    padding-right: 25%;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    float: center;
 }
 div#cim {
     font-size: 24pt;
@@ -48,8 +49,8 @@ div#cim {
 </tr>
 @foreach($employees as $employee)
 <tr>
-<td>{{ $employee['name'] }}</td>
-<td>{{ $employee['company_name'] }}</td>
+<td>{{ $employee->name }}</td>
+<td>{{ $employee->company()->get()->first()->company_name }}</td>
 </tr>
 @endforeach
 </table>

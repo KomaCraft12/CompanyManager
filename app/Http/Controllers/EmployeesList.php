@@ -10,7 +10,7 @@ class EmployeesList extends Controller
 {
     public function index() {
 
-        $employees = Employees::join('companies', 'companies.company_id', '=', 'employees.company_id')->get(['companies.company_name', 'employees.*']);
+        $employees = Employees::all();
         return view('employees', ['employees' => $employees]);
 
     }
